@@ -6,14 +6,20 @@
 #include "fstream"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(1800, 770), "SFML Works!");
+    sf::RenderWindow window(sf::VideoMode(1850, 800), "SFML Works!");
     window.setFramerateLimit(60);
 
-    sf::Texture bgTexture;
-    if (!bgTexture.loadFromFile("../assets/neighborhood.png")) {
+    sf::Texture neighborHoodTexture;
+    if (!neighborHoodTexture.loadFromFile("../assets/better_hood.png")) {
         return -1;
     }
-    sf::Sprite bgSprite(bgTexture);
+    sf::Sprite bgSprite(neighborHoodTexture);
+
+    sf::Texture mericaTexture;
+    if (!mericaTexture.loadFromFile("../assets/merica.png")) {
+        return -1;
+    }
+
 
     Network network;
     PersonData personData;
@@ -36,7 +42,7 @@ int main() {
 
                 if (event.mouseButton.button == sf::Mouse::Left) {
 
-                    // coords << sf::Mouse::getPosition(window).x << " " << sf::Mouse::getPosition(window).y << "\n";
+                    coords << sf::Mouse::getPosition(window).x << " " << sf::Mouse::getPosition(window).y << "\n";
                     network.HandleLC(window, sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y);
 
                 }
@@ -47,7 +53,7 @@ int main() {
             }
         }
 
-        window.clear();
+        window.clear(sf::Color(30, 30, 30));
         window.draw(bgSprite);
         network.Display(window);
         window.display();

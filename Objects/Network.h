@@ -40,7 +40,7 @@ public:
 
                 double distance = std::sqrt( std::pow(currHouse->xpos - otherHouse->xpos, 2) + std::pow(currHouse->ypos - otherHouse->ypos, 2));
 
-                if (distance < 110) {
+                if (distance < 130) {
                     currHouse->friends.insert(otherHouse);
 
                     AddLine(currHouse, otherHouse, 3);

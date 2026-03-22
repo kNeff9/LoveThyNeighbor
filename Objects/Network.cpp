@@ -18,7 +18,7 @@ void Network::AddLine(const Node* n, const Node* f, float thickness) {
     line.setOrigin(0.0, thickness / 2.0);
     line.setPosition({n->xpos, n->ypos});
     line.setRotation(angle);
-    line.setFillColor(sf::Color::Red);
+    line.setFillColor(sf::Color(255,255,255,40));
 
     lines.push_back(line);
 
