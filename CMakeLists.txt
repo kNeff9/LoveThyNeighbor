@@ -11,5 +11,11 @@ project(Project2)
 set(SFML_DIR "C:/Users/kevin/SFML/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML-2.5.1/lib/cmake/SFML")
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics audio REQUIRED)
-add_executable(Project2 main.cpp)
+add_executable(Project2 main.cpp
+        Objects/Node.h
+        Objects/Node.cpp
+        Objects/Network.h
+        Objects/PersonData.h
+        Objects/Network.cpp
+        Objects/ButtonInterface.h)
 target_link_libraries(Project2 sfml-system sfml-window sfml-graphics sfml-audio)

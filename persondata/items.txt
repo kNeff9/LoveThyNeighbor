@@ -1,0 +1,1000 @@
+pencil
+pen
+notebook
+eraser
+ruler
+scissors
+stapler
+tape
+glue
+marker
+highlighter
+compass
+protractor
+calculator
+binder
+folder
+backpack
+lunchbox
+water bottle
+thermos
+flashlight
+batteries
+candle
+lighter
+matches
+umbrella
+sunglasses
+watch
+wallet
+keychain
+belt
+hat
+gloves
+scarf
+socks
+shoes
+boots
+sandals
+sneakers
+jacket
+raincoat
+hoodie
+sweater
+t-shirt
+jeans
+shorts
+skirt
+dress
+tie
+briefcase
+handbag
+purse
+tote bag
+duffel bag
+suitcase
+sleeping bag
+tent
+hammock
+camping stove
+lantern
+compass
+map
+binoculars
+telescope
+magnifying glass
+microscope
+camera
+tripod
+memory card
+USB drive
+hard drive
+keyboard
+mouse
+mousepad
+monitor
+webcam
+headphones
+earbuds
+speaker
+microphone
+phone
+tablet
+laptop
+charger
+power bank
+extension cord
+surge protector
+alarm clock
+radio
+television
+remote control
+DVD player
+gaming console
+controller
+joystick
+board game
+chess set
+checkers set
+deck of cards
+dice
+puzzle
+yo-yo
+frisbee
+kite
+jump rope
+hula hoop
+skateboard
+scooter
+bicycle
+helmet
+knee pads
+elbow pads
+roller skates
+ice skates
+snowboard
+skis
+ski poles
+sled
+surfboard
+paddleboard
+kayak paddle
+life jacket
+snorkel
+fins
+goggles
+swim cap
+towel
+beach ball
+volleyball
+basketball
+football
+soccer ball
+baseball
+softball
+tennis ball
+golf ball
+ping pong ball
+badminton racket
+tennis racket
+baseball bat
+hockey stick
+golf club
+fishing rod
+fishing line
+fish hook
+tackle box
+bait
+net
+bow
+arrow
+quiver
+dartboard
+darts
+pool cue
+billiard balls
+bowling ball
+boxing gloves
+punching bag
+jump rope
+resistance band
+dumbbell
+barbell
+weight plate
+yoga mat
+foam roller
+pull-up bar
+kettlebell
+medicine ball
+treadmill
+bicycle pump
+tire patch kit
+wrench
+screwdriver
+hammer
+nails
+screws
+bolts
+nuts
+washers
+drill
+drill bits
+saw
+sandpaper
+paintbrush
+paint roller
+paint tray
+ladder
+tape measure
+level
+square
+chisel
+pliers
+wire cutters
+utility knife
+box cutter
+staple gun
+caulking gun
+heat gun
+soldering iron
+solder
+multimeter
+voltage tester
+wire stripper
+electrical tape
+duct tape
+zip ties
+bungee cord
+rope
+chain
+padlock
+combination lock
+deadbolt
+door hinge
+door knob
+drawer pull
+shelf bracket
+wall anchor
+picture hook
+curtain rod
+curtain rings
+shower curtain
+bath mat
+toilet brush
+plunger
+mop
+broom
+dustpan
+vacuum cleaner
+mop bucket
+scrub brush
+sponge
+dish soap
+laundry detergent
+fabric softener
+bleach
+all-purpose cleaner
+glass cleaner
+trash bag
+recycling bin
+compost bin
+watering can
+garden hose
+sprinkler
+trowel
+shovel
+rake
+hoe
+pruning shears
+hedge trimmer
+lawn mower
+leaf blower
+wheelbarrow
+flower pot
+planter box
+seeds
+fertilizer
+potting soil
+mulch
+bird feeder
+bird bath
+wind chime
+garden gnome
+stepping stone
+patio umbrella
+lawn chair
+hammock stand
+outdoor table
+barbecue grill
+charcoal
+lighter fluid
+grilling tongs
+spatula
+grill brush
+apron
+oven mitt
+pot
+pan
+wok
+baking sheet
+muffin tin
+cake pan
+pie dish
+mixing bowl
+measuring cup
+measuring spoon
+whisk
+spatula
+ladle
+slotted spoon
+wooden spoon
+tongs
+peeler
+grater
+colander
+strainer
+cutting board
+chef knife
+bread knife
+paring knife
+knife sharpener
+can opener
+bottle opener
+corkscrew
+wine glass
+beer mug
+coffee mug
+teacup
+plate
+bowl
+fork
+spoon
+knife
+chopsticks
+placemat
+napkin
+tablecloth
+pitcher
+carafe
+blender
+food processor
+toaster
+toaster oven
+microwave
+coffee maker
+tea kettle
+electric kettle
+rice cooker
+slow cooker
+pressure cooker
+air fryer
+waffle iron
+panini press
+juicer
+stand mixer
+hand mixer
+ice cream maker
+bread maker
+dehydrator
+pasta maker
+sushi mat
+mortar and pestle
+spice rack
+salt shaker
+pepper grinder
+butter dish
+sugar bowl
+creamer
+oil dispenser
+vinegar bottle
+honey jar
+jam jar
+lunch container
+thermos
+ice pack
+reusable bag
+produce bag
+food wrap
+aluminum foil
+parchment paper
+wax paper
+paper towel
+napkin
+tissue box
+toilet paper
+cotton balls
+cotton swabs
+bandage
+gauze
+medical tape
+antiseptic
+thermometer
+heating pad
+ice pack
+pill organizer
+first aid kit
+tweezers
+nail clippers
+nail file
+nail polish
+polish remover
+lotion
+sunscreen
+lip balm
+chapstick
+deodorant
+shampoo
+conditioner
+hair brush
+hair comb
+hair tie
+bobby pins
+hair clips
+hair dryer
+curling iron
+straightener
+razor
+shaving cream
+aftershave
+toothbrush
+toothpaste
+dental floss
+mouthwash
+soap bar
+body wash
+loofa
+bath bomb
+face wash
+toner
+moisturizer
+eye cream
+foundation
+concealer
+blush
+eyeshadow
+mascara
+eyeliner
+lipstick
+lip gloss
+makeup brush
+makeup sponge
+perfume
+cologne
+mirror
+hand mirror
+magnifying mirror
+scale
+notebook
+journal
+planner
+calendar
+sticky notes
+index cards
+paper clips
+binder clips
+rubber bands
+staples
+push pins
+thumbtacks
+tape dispenser
+label maker
+labels
+envelopes
+stamps
+postcard
+greeting card
+gift wrap
+ribbon
+bow
+gift bag
+tissue paper
+bubble wrap
+packing tape
+shipping box
+padded envelope
+rubber stamp
+ink pad
+wax seal
+wax stamp
+bookmark
+book light
+reading glasses
+magnifier
+dictionary
+thesaurus
+atlas
+globe
+world map
+poster
+picture frame
+photo album
+scrapbook
+stickers
+washi tape
+colored pencils
+crayons
+watercolors
+acrylic paint
+oil paint
+canvas
+easel
+sketchbook
+charcoal pencil
+pastel
+ink pen
+calligraphy set
+origami paper
+clay
+sculpting tools
+knitting needles
+yarn
+crochet hook
+embroidery hoop
+embroidery thread
+sewing needle
+thread
+thimble
+seam ripper
+fabric
+pattern
+sewing machine
+iron
+ironing board
+clothes hanger
+clothespins
+laundry basket
+hamper
+shoe rack
+shoe horn
+shoe polish
+shoelaces
+boot brush
+umbrella stand
+coat rack
+key holder
+mail organizer
+magazine holder
+bookend
+bookshelf
+filing cabinet
+drawer organizer
+desk organizer
+pencil holder
+paper tray
+whiteboard
+chalkboard
+corkboard
+bulletin board
+dry erase marker
+chalk
+eraser
+projector
+projection screen
+laser pointer
+presentation clicker
+extension cord
+power strip
+cable organizer
+cable ties
+label printer
+label tape
+hole punch
+paper shredder
+laminator
+laminating pouches
+binding machine
+binding covers
+three-hole punch
+document scanner
+printer
+ink cartridge
+toner cartridge
+printer paper
+cardstock
+construction paper
+graph paper
+tracing paper
+tissue paper
+crepe paper
+foam board
+poster board
+mat board
+canvas board
+wood panel
+sketchpad
+watercolor paper
+oil paper
+charcoal paper
+pastel paper
+rice paper
+vellum
+acetate
+transparency film
+carbon paper
+NCR paper
+carbonless paper
+receipt paper
+thermal paper
+photo paper
+glossy paper
+matte paper
+kraft paper
+newsprint
+butcher paper
+banner paper
+banner stand
+brochure holder
+display stand
+easel pad
+flip chart
+whiteboard easel
+mobile whiteboard
+glass board
+magnetic board
+magnetic letters
+magnetic numbers
+magnetic clips
+whiteboard eraser
+whiteboard cleaner
+dry erase paint
+chalkboard paint
+peg board
+pegboard hooks
+tool organizer
+storage bin
+storage box
+storage cube
+storage ottoman
+storage bench
+storage basket
+wicker basket
+wire basket
+mesh basket
+canvas bin
+fabric bin
+plastic bin
+wooden crate
+metal tin
+mason jar
+glass jar
+ceramic jar
+decorative box
+shadow box
+display case
+trophy
+plaque
+medal
+ribbon
+certificate frame
+diploma frame
+award ribbon
+nameplate
+desk nameplate
+business card holder
+business cards
+name badge
+lanyard
+badge holder
+badge reel
+clipboard
+hardboard clipboard
+aluminum clipboard
+legal pad
+steno pad
+composition notebook
+spiral notebook
+hardcover notebook
+softcover notebook
+leather journal
+travel journal
+bullet journal
+dot grid notebook
+graph notebook
+blank notebook
+lined notebook
+canteen
+compass pouch
+fire starter
+paracord
+tarp
+sleeping pad
+camp axe
+pocket knife
+multitool
+carabiner
+climbing rope
+harness
+chalk bag
+crash pad
+hiking boots
+trail shoes
+trekking poles
+gaiters
+hydration pack
+water filter
+water purifier
+iodine tablets
+emergency blanket
+signal mirror
+whistle
+flare
+bear spray
+bear canister
+food bag
+dry bag
+stuff sack
+compression sack
+rain cover
+pack cover
+headlamp
+spare bulb
+solar charger
+hand crank radio
+satellite communicator
+altimeter
+barometer
+thermometer clip
+wind meter
+rain gauge
+snow shovel
+avalanche beacon
+probe pole
+crampons
+ice axe
+rope bag
+anchor kit
+belay device
+rappel device
+ascender
+descender
+pulley
+swivel
+snap hook
+locking carabiner
+quickdraw
+sling
+webbing
+cordelette
+nut tool
+spring loaded cam
+hex nut
+stopper nut
+tricam
+piton
+ice screw
+snow picket
+deadman anchor
+ski boot
+ski bag
+boot bag
+ski wax
+wax iron
+wax scraper
+edge file
+base repair kit
+binding screwdriver
+ski strap
+goggle case
+goggle lens
+helmet
+helmet bag
+neck gaiter
+balaclava
+ski gloves
+liner gloves
+hand warmers
+foot warmers
+boot dryer
+boot liner
+boot insole
+traction device
+microspikes
+snowshoes
+snowshoe bag
+ski poles
+pole basket
+pole strap
+pole tip
+ski lock
+ski rack
+roof box
+truck bed rack
+cargo net
+tie down strap
+ratchet strap
+cam buckle strap
+tow strap
+recovery strap
+shackle
+snatch block
+hi-lift jack
+floor jack
+jack stand
+tire iron
+lug wrench
+breaker bar
+torque wrench
+socket set
+ratchet handle
+extension bar
+universal joint
+hex key set
+allen wrench
+star key set
+torx bit set
+impact driver
+impact wrench
+angle grinder
+bench grinder
+belt sander
+orbital sander
+random orbit sander
+detail sander
+oscillating tool
+rotary tool
+dremel bit set
+router
+router bit set
+jigsaw
+reciprocating saw
+circular saw
+miter saw
+table saw
+band saw
+scroll saw
+chainsaw
+pole saw
+hedge trimmer
+string trimmer
+edger
+tiller
+cultivator
+auger
+post hole digger
+ground anchor
+fence post
+fence panel
+fence wire
+barbed wire
+chicken wire
+hardware cloth
+wire mesh
+metal mesh
+plastic mesh
+bird netting
+deer netting
+garden netting
+row cover
+frost cloth
+shade cloth
+greenhouse film
+poly tunnel
+cold frame
+hotbed
+seed tray
+plug tray
+cell tray
+peat pot
+coir pot
+net pot
+hydroponic system
+grow light
+grow tent
+timer
+pH meter
+EC meter
+nutrient solution
+growing medium
+rockwool
+perlite
+vermiculite
+expanded clay
+coco coir
+sphagnum moss
+live moss
+air plant
+succulent
+cactus
+fern
+orchid
+bromeliad
+peace lily
+snake plant
+pothos
+philodendron
+monstera
+fiddle leaf fig
+rubber plant
+dracaena
+bamboo palm
+umbrella plant
+spider plant
+aloe vera
+jade plant
+money tree
+bonsai tree
+bonsai tools
+bonsai wire
+bonsai soil
+bonsai pot
+bonsai scissors
+grafting knife
+budding knife
+pruning saw
+loppers
+pole pruner
+tree saw
+chainsaw chaps
+safety glasses
+ear protection
+dust mask
+respirator
+face shield
+hard hat
+safety vest
+steel toe boots
+work gloves
+cut resistant gloves
+welding gloves
+welding helmet
+welding jacket
+welding apron
+welding blanket
+wire feed welder
+stick welder
+TIG welder
+plasma cutter
+angle grinder disc
+cutting disc
+grinding disc
+flap disc
+wire wheel
+wire cup brush
+drill press
+drill press vise
+bench vise
+clamp
+bar clamp
+pipe clamp
+spring clamp
+toggle clamp
+woodworking clamp
+corner clamp
+miter clamp
+strap clamp
+band clamp
+hand plane
+block plane
+spoke shave
+drawknife
+card scraper
+cabinet scraper
+marking gauge
+mortise gauge
+sliding bevel
+combination square
+try square
+miter square
+framing square
+speed square
+chalk line
+plumb bob
+laser level
+spirit level
+torpedo level
+long level
+post level
+angle finder
+digital angle gauge
+stud finder
+wire detector
+pipe detector
+metal detector
+moisture meter
+wood moisture meter
+paint thickness gauge
+thickness planer
+jointer
+drum sander
+spindle sander
+scroll saw blade
+band saw blade
+jigsaw blade
+reciprocating saw blade
+circular saw blade
+miter saw blade
+table saw blade
+router bit
+dovetail jig
+box joint jig
+pocket hole jig
+doweling jig
+tenon jig
+mortising attachment
+hollow chisel mortiser
+biscuit joiner
+plate joiner
+nail gun
+brad nailer
+finish nailer
+framing nailer
+roofing nailer
+flooring nailer
+staple gun
+crown stapler
+upholstery stapler
+glue gun
+glue sticks
+wood glue
+epoxy
+super glue
+contact cement
+construction adhesive
+silicone sealant
+weatherstripping
+door sweep
+threshold
+window screen
+screen repair kit
+window lock
+window latch
