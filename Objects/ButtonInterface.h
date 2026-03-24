@@ -9,12 +9,54 @@
 #include "PersonData.h"
 #include <map>
 #include <cmath>
+#include "helperFuncs.h"
 
 struct ButtonInterface {
 
+    sf::Font font;
+
+    sf::Text desiredItemTitle;
+    sf::Text startingNodeTitle;
+    sf::Text desiredItem;
 
 
+    sf::Sprite switch_button_spr;
+    sf::Texture switch_button_texture;
 
+    ButtonInterface() {
+
+        if (!font.loadFromFile("../assets/fonts/Lora-Regular.ttf")) {
+            throw std::runtime_error("Could not load font");
+        }
+
+        switch_button_texture.loadFromFile("../assets/switch_button.png");
+        switch_button_spr.setTexture(switch_button_texture);
+        switch_button_spr.setPosition(1610, 126);
+
+        configureText(desiredItemTitle, "Desired Item:", font, 25, sf::Color::Black);
+        setText(desiredItemTitle, 1730, 100);
+
+        configureText(desiredItem, "test item", font, 19, sf::Color::Black);
+        setText(desiredItem, 1735, 150);
+
+    }
+
+    void handleLC(sf::RenderWindow& window, int x, int y);
+
+    void RandomizeItem(PersonData& pd) {
+
+        std::string randomItem = pd.getRandomItem();
+        configureText(desiredItem, randomItem, font, 19, sf::Color::Black);
+
+    }
+
+    void DrawInterface(sf::RenderWindow& window) {
+
+        window.draw(desiredItemTitle);
+        window.draw(switch_button_spr);
+        window.draw(desiredItem);
+
+    }
 
 
 };

@@ -4,10 +4,13 @@
 #include "Objects/Network.h"
 #include "Objects/PersonData.h"
 #include "fstream"
+#include "Objects/ButtonInterface.h"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(1850, 800), "SFML Works!");
     window.setFramerateLimit(60);
+
+    ButtonInterface interface;
 
     sf::Texture neighborHoodTexture;
     if (!neighborHoodTexture.loadFromFile("../assets/better_hood.png")) {
@@ -42,7 +45,8 @@ int main() {
 
                 if (event.mouseButton.button == sf::Mouse::Left) {
 
-                    coords << sf::Mouse::getPosition(window).x << " " << sf::Mouse::getPosition(window).y << "\n";
+                    // coords << sf::Mouse::getPosition(window).x << " " << sf::Mouse::getPosition(window).y << "\n";
+                    std::cout << sf::Mouse::getPosition(window).x << " " << sf::Mouse::getPosition(window).y << "\n";
                     network.HandleLC(window, sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y);
 
                 }
@@ -53,9 +57,10 @@ int main() {
             }
         }
 
-        window.clear(sf::Color(30, 30, 30));
+        window.clear(sf::Color(53, 204, 172));
         window.draw(bgSprite);
         network.Display(window);
+        interface.DrawInterface(window);
         window.display();
     }
     return 0;

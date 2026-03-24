@@ -46,6 +46,16 @@ struct PersonData {
 
         return allNames.at(dist(rng));
     }
+
+    std::string getRandomItem() {
+
+        std::random_device rd;
+        std::mt19937 rng(rd());
+        std::uniform_int_distribution<int> dist(0, allItems.size() - 1);
+
+        return allItems.at(dist(rng));
+
+    }
 };
 
 #endif //PROJECT2_PERSONDATA_H
