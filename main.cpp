@@ -7,7 +7,7 @@
 #include "Objects/ButtonInterface.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(1850, 800), "SFML Works!");
+    sf::RenderWindow window(sf::VideoMode({1850, 800}), "SFML Works!");
     window.setFramerateLimit(60);
 
     ButtonInterface interface;

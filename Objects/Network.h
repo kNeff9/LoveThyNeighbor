@@ -27,7 +27,16 @@ public:
     void TestPopulate(PersonData& pd) {
 
         for (auto pair : pd.houseCoords) {
-            people.push_back(new Node(pd.getRandomName(), pair.first, pair.second));
+            Node* node = new Node(pd.getRandomName(), pair.first, pair.second);
+            // people.push_back(new Node(pd.getRandomName(), pair.first, pair.second));
+
+            // Random inventory
+            int numItems = 4;
+            for (int i = 0; i < numItems; i++) {
+                node->items.push_back(pd.getRandomItem());
+            }
+
+            people.push_back(node);
         }
 
         for (Node* currHouse : people) {

@@ -23,15 +23,17 @@ struct ButtonInterface {
     sf::Sprite switch_button_spr;
     sf::Texture switch_button_texture;
 
-    ButtonInterface() {
+    ButtonInterface()
+    {
 
         if (!font.loadFromFile("../assets/fonts/Lora-Regular.ttf")) {
             throw std::runtime_error("Could not load font");
         }
-
-        switch_button_texture.loadFromFile("../assets/switch_button.png");
+        if (!switch_button_texture.loadFromFile("../assets/switch_button.png")) {
+            throw std::runtime_error("Could not load texture");
+        }
         switch_button_spr.setTexture(switch_button_texture);
-        switch_button_spr.setPosition(1610, 126);
+        switch_button_spr.setPosition(sf::Vector2f(1610, 126));
 
         configureText(desiredItemTitle, "Desired Item:", font, 25, sf::Color::Black);
         setText(desiredItemTitle, 1730, 100);

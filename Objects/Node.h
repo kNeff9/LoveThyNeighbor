@@ -30,7 +30,7 @@ struct  Node {
         shape.setFillColor(sf::Color::Blue);
         shape.setPosition({x,y});
 
-        shape.setOrigin(5, 5);
+        shape.setOrigin(sf::Vector2f(5.f, 5.f));
     }
 
 };
