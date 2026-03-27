@@ -30,7 +30,7 @@ public:
             Node* node = new Node(pd.getRandomName(), pair.first, pair.second);
             // people.push_back(new Node(pd.getRandomName(), pair.first, pair.second));
 
-            // Random inventory
+            // Random inventory, placeholder for now
             int numItems = 4;
             for (int i = 0; i < numItems; i++) {
                 node->items.push_back(pd.getRandomItem());
