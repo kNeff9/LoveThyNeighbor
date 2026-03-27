@@ -4,8 +4,6 @@
 #include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
-#include "Node.h"
-#include "Network.h"
 #include <fstream>
 #include <random>
 
