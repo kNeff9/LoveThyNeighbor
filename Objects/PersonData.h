@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include "Node.h"
+#include "Network.h"
 #include <fstream>
 #include <random>
 
@@ -11,7 +13,6 @@ struct PersonData {
 
     std::vector<std::string> allNames;
     std::vector<std::string> allItems;
-    std::vector<std::string> allNouns;
     std::vector<std::pair<int, int>> houseCoords;
 
     PersonData() {
@@ -19,7 +20,6 @@ struct PersonData {
         std::ifstream nameFile("../persondata/names.txt");
         std::ifstream itemFile("../persondata/items.txt");
         std::ifstream coordsFile("../persondata/house_coords.txt");
-        std::ifstream nounsFile("../persondata/nouns.txt");
 
         std::string line;
         while (std::getline(nameFile, line)) {
@@ -34,10 +34,6 @@ struct PersonData {
 
         while (coordsFile >> currx >> curry) {
             houseCoords.emplace_back(currx, curry);
-        }
-
-        while (std::getline(nounsFile, line)) {
-            allNouns.push_back(line);
         }
 
     }

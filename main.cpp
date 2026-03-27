@@ -10,7 +10,7 @@
 #include "Objects/NeighborhoodInterface.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(1850, 800), "SFML Works!");
+    sf::RenderWindow window(sf::VideoMode({1850, 800}), "SFML Works!");
     window.setFramerateLimit(60);
 
     std::ofstream coords("../persondata/state_coords.txt", std::ios::app);
