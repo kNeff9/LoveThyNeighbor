@@ -1,5 +1,5 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
+#include <sfml/Graphics.hpp>
 #include "Objects/Node.h"
 #include "Objects/Network.h"
 #include "Objects/PersonData.h"

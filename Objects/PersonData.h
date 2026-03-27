@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include <SFML/Graphics.hpp>
+// #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <random>
 
