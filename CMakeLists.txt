@@ -29,5 +29,7 @@ add_executable(Project2 main.cpp
         Objects/CountryInterface.h
         Objects/CountryInterface.cpp
         Objects/NeighborhoodInterface.h
-        Objects/NeighborhoodInterface.cpp)
+        Objects/NeighborhoodInterface.cpp
+        Objects/BFS.h
+        Objects/BFS.cpp)
 target_link_libraries(Project2 sfml-system sfml-window sfml-graphics)

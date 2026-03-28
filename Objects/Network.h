@@ -9,6 +9,8 @@
 #include "PersonData.h"
 #include <map>
 #include <cmath>
+#include <unordered_map>
+#include "BFS.h"
 
 
 
@@ -18,6 +20,11 @@ struct Network {
     std::vector<sf::RectangleShape> lines;
 
     Node* startingNode = nullptr;
+
+    //omar - recursive DFS helper func
+    bool DFSHelper(Node* curr, const std::string& targetItem, std::unordered_set<Node*>& visited, std::unordered_map<Node*, Node*>& parentMap, Node*& foundNode);
+    //omar - helper to check if node has target item
+    bool NodehasItem(const Node* node, const std::string& targetItem) const;
 
 
     void AddPerson(Node* person) {
@@ -75,6 +82,11 @@ struct Network {
         }
     }
 
+    // omar - main DFS func that finds first node w target item
+    Node* DepthFirstSearch(Node* startNode, const std::string& targetItem);
+    // omar - returns full path from start node to found node
+    std::vector<Node*> DepthFirstSearchPath(Node* startNode, const std::string& targetItem);
+
 };
 
 #endif //PROJECT2_NETWORK_H
@@ -82,56 +94,3 @@ struct Network {
 
 
 
-
-// void Populate(PersonData& pd) {
-    //
-    //     std::vector<Node*> currPeople;
-    //     currPeople.push_back(new Node(pd.getRandomName(), 100, 100));
-    //
-    //     std::map<std::pair<float, float>, Node*> seen;
-    //     seen[{100, 100}] = currPeople.at(0);
-    //     people.push_back(currPeople.at(0));
-    //
-    //     while (!currPeople.empty() && this->people.size() < 200) {
-    //
-    //         std::vector<Node*> newPeople;
-    //
-    //         for (Node* n : currPeople) {
-    //
-    //             if (n->xpos < 1400) {
-    //
-    //                 if (seen.count({n->xpos + 100, n->ypos})) {
-    //
-    //                     n->friends.push_back(seen[{n->xpos + 100, n->ypos}]);
-    //                     seen[{n->xpos + 100, n->ypos}]->friends.push_back(n);
-    //                 } else {
-    //                     Node* rightFriend = new Node(pd.getRandomName(), n->xpos + 100, n->ypos);
-    //                     n->friends.push_back(rightFriend);
-    //                     newPeople.push_back(rightFriend);
-    //                     rightFriend->friends.push_back(n);
-    //                     people.push_back(rightFriend);
-    //                     seen[{rightFriend->xpos, rightFriend->ypos}] = rightFriend;
-    //                 }
-    //
-    //             }
-    //
-    //             if (n->ypos < 700) {
-    //
-    //                 if (seen.count({n->xpos, n->ypos + 100})) {
-    //                     n->friends.push_back(seen[{n->xpos, n->ypos + 100}]);
-    //                     seen[{n->xpos, n->ypos + 100}]->friends.push_back(n);
-    //                 } else {
-    //                     Node* leftFriend = new Node(pd.getRandomName(), n->xpos, n->ypos + 100);
-    //                     n->friends.push_back(leftFriend);
-    //                     newPeople.push_back(leftFriend);
-    //                     leftFriend->friends.push_back(n);
-    //                     people.push_back(leftFriend);
-    //                     seen[{leftFriend->xpos, leftFriend->ypos}] = leftFriend;
-    //                 }
-    //
-    //             }
-    //         }
-    //
-    //         currPeople = newPeople;
-    //     }
-    // }
