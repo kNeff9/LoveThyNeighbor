@@ -20,7 +20,6 @@ struct Network {
     Node* startingNode = nullptr;
 
 
-
     void AddPerson(Node* person) {
         people.push_back(person);
     }

@@ -38,8 +38,15 @@ struct CountryInterface {
     sf::Sprite dfsButtonSpr;
     sf::Texture dfsTexture;
 
+    sf::Sprite nodeSwitchSpr;
+    sf::Texture nodeSwitchTexture;
+
+    sf::Sprite itemSwitchSpr;
+    sf::Texture itemSwitchTexture;
+
     //I am storing the 100k country network inside the interface
     Country countryNetwork;
+    Node* startingNode = nullptr;
 
     CountryInterface() {
 
@@ -61,13 +68,33 @@ struct CountryInterface {
         bfsButtonSpr.setTexture(bfsTexture);
         bfsButtonSpr.setPosition(664,430);
 
+        nodeSwitchTexture.loadFromFile("../assets/switch_button.png");
+        nodeSwitchSpr.setTexture(nodeSwitchTexture);
+        nodeSwitchSpr.setPosition(231, 328);
+
+        itemSwitchTexture.loadFromFile("../assets/switch_button.png");
+        itemSwitchSpr.setTexture(itemSwitchTexture);
+        itemSwitchSpr.setPosition(231, 547);
+
         configureText(startingNodeName, countryNetwork.startingNode->name, font, 25, sf::Color::Black);
-        setText(startingNodeName, 300, 339);
+        setText(startingNodeName, 360, 350);
 
         configureText(desiredItemName, pd.getRandomItem(), font, 25, sf::Color::Black);
-        setText(desiredItemName, 300, 556);
+        setText(desiredItemName, 360,565);
 
 
+    }
+
+    void UpdateStartingNode(Node* n) {
+        startingNode = n;
+
+        if (n != nullptr) {
+            configureText(startingNodeName, n->name, font, 25, sf::Color::Black);
+        }
+    }
+
+    void UpdateDesiredItem(std::string s) {
+        configureText(desiredItemName, s, font, 25, sf::Color::Black);
     }
 
     void DrawInterface(sf::RenderWindow& window) {
@@ -77,6 +104,8 @@ struct CountryInterface {
         window.draw(desiredItemName);
         window.draw(dfsButtonSpr);
         window.draw(bfsButtonSpr);
+        window.draw(itemSwitchSpr);
+        window.draw(nodeSwitchSpr);
 
     }
 

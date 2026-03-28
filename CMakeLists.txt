@@ -52,5 +52,6 @@ add_executable(Project2 main.cpp
         Objects/Country.h
         Objects/CountryInterface.h
         Objects/CountryInterface.cpp
-        Objects/NeighborhoodInterface.h)
+        Objects/NeighborhoodInterface.h
+        Objects/NeighborhoodInterface.cpp)
 target_link_libraries(Project2 sfml-system sfml-window sfml-graphics sfml-audio)

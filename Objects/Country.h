@@ -27,6 +27,7 @@ struct Country {
 
     std::vector<Node*> allPeople;
     Node* startingNode = nullptr;
+    std::string desiredNoun = "";
 
     void Populate(PersonData& pd) {
 
@@ -76,6 +77,15 @@ struct Country {
         std::uniform_int_distribution<int> dist(0, allPeople.size() - 1);
 
         return allPeople.at(dist(rng));
+    }
+
+    std::string GetRandomNoun(PersonData& pd) {
+
+        std::random_device rd;
+        std::mt19937 rng(rd());
+        std::uniform_int_distribution<int> dist(0, allPeople.size() - 1);
+        return pd.allNouns.at(dist(rng));
+
     }
 
 };

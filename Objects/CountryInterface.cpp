@@ -26,6 +26,17 @@ void CountryInterface::HandleLC(sf::RenderWindow &window, int x, int y) {
         return;
     }
 
+    if (nodeSwitchSpr.getGlobalBounds().contains(clickCoords)) {
+        countryNetwork.startingNode = countryNetwork.GetRandomNode();
+        UpdateStartingNode(countryNetwork.startingNode);
+    }
+
+    if (itemSwitchSpr.getGlobalBounds().contains(clickCoords)) {
+
+        countryNetwork.desiredNoun = countryNetwork.GetRandomNoun(pd);
+        UpdateDesiredItem(countryNetwork.desiredNoun);
+    }
+
 
 
 }

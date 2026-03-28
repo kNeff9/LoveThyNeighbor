@@ -7,6 +7,7 @@
 #include "Objects/ButtonInterface.h"
 #include "Objects/Country.h"
 #include "Objects/CountryInterface.h"
+#include "Objects/NeighborhoodInterface.h"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(1850, 800), "SFML Works!");
@@ -14,25 +15,8 @@ int main() {
 
     std::ofstream coords("../persondata/state_coords.txt", std::ios::app);
 
-    sf::Texture neighborHoodTexture;
-    if (!neighborHoodTexture.loadFromFile("../assets/better_hood.png")) {
-        return -1;
-    }
-    sf::Sprite bgSprite(neighborHoodTexture);
-
-    sf::Texture countryTexture;
-    if (!countryTexture.loadFromFile("../assets/country.png")) {
-        return -1;
-    }
-    sf::Sprite countrySprite(countryTexture);
-
-    Network network;
-    PersonData personData;
-
-    ButtonInterface interface;
-    network.TestPopulate(personData);
-
     CountryInterface countryInterface;
+    NeighborhoodInterface neighborhoodInterface;
 
     bool onNeighborhood = true;
 
@@ -51,23 +35,16 @@ int main() {
                     auto x = sf::Mouse::getPosition(window).x;
                     auto y = sf::Mouse::getPosition(window).y;
 
-                    std::cout << x << " " << y << "\n";
+                    // std::cout << x << " " << y << "\n";
 
                     // coords << sf::Mouse::getPosition(window).x << " " << sf::Mouse::getPosition(window).y << "\n";
 
                     if (onNeighborhood) {
-                        network.HandleLC(window, x, y);
-
-                        if (network.startingNode != nullptr) {
-                            interface.UpdateStartingNode(network.startingNode);
-                        }
-                        interface.handleLC(window, x, y);
+                        neighborhoodInterface.HandleLC(window, x, y);
                     } else {
                         countryInterface.HandleLC(window, x, y);
                     }
-
                 }
-
             }
 
             if (event.type == sf::Event::KeyPressed) {
@@ -80,9 +57,7 @@ int main() {
         window.clear(sf::Color(53, 204, 172));
 
         if (onNeighborhood) {
-            window.draw(bgSprite);
-            network.Display(window);
-            interface.DrawInterface(window);
+            neighborhoodInterface.DrawInterface(window);
         } else {
             countryInterface.DrawInterface(window);
         }
