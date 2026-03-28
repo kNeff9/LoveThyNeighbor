@@ -23,23 +23,12 @@ class BFS {
 public:
     searchResult iterative(Node* start, const std::string& item);
 
-    searchResult recursive(Node* start, const std::string& item);
-
 private:
     // Path reconstruction for parent map output
     std::vector<Node*> reconstructPath(
         std::unordered_map<Node*, Node*>& parent,
         Node* start,
         Node* target);
-
-    // Recursive helper function for queue expansion
-    Node* recursiveHelper(
-        std::queue<Node*>& frontier,
-        std::unordered_set<Node*>& visited,
-        std::unordered_map<Node*, Node*> parent,
-        const std::string& item,
-        int verticesVisited
-        );
 };
 
 #endif //PROJECT2_BFS_H
