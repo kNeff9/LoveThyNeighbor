@@ -18,7 +18,19 @@
 void ButtonInterface::handleLC(sf::RenderWindow &window, int x, int y) {
 
 
+    if (x < 0 || x >= window.getSize().x) {
+        return;
+    }
 
+    if (y < 0 || y >= window.getSize().y) {
+        return;
+    }
+
+    sf::Vector2<float> clickCoords = window.mapPixelToCoords({x, y});
+
+    if (switch_button_spr.getGlobalBounds().contains(clickCoords)) {
+        RandomizeItem();
+    }
 
 
 }
