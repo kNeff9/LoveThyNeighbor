@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <sfml/Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <set>
 
 struct  Node {

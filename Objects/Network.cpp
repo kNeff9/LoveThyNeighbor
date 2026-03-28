@@ -6,6 +6,7 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include <cmath>
+#include <algorithm>
 
 void Network::AddLine(const Node* n, const Node* f, float thickness) {
 
@@ -24,11 +25,75 @@ void Network::AddLine(const Node* n, const Node* f, float thickness) {
 
 }
 
+// omar - checks if current node has the target item
+bool Network::NodehasItem(const Node* node, const std::string& targetItem) const {
+    for (const std::string& item : node -> items) {
+        if (item == targetItem) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// omar - recursive DFS traversal
+bool Network::DFSHelper(Node *curr, const std::string &targetItem, std::unordered_set<Node *> &visited, std::unordered_map<Node *, Node *> &parentMap, Node *&foundNode) {
+    if (curr == nullptr) {
+        return false;
+    }
+    visited.insert(curr); // omar - marks node as visited
+    if (NodehasItem(curr, targetItem)) { // omar - checks if current node has item
+        foundNode = curr;
+        return true;
+    }
+    // omar - explore neighbors recursively
+    for (Node* neighbor : curr -> friends) {
+        if (visited.find(neighbor) == visited.end()) {
+            parentMap[neighbor] = curr; // omar - track path using parent map
+            if (DFSHelper(neighbor, targetItem, visited, parentMap, foundNode)) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+// omar - entry point DFS search
+Node *Network::DepthFirstSearch(Node *startNode, const std::string &targetItem) {
+    if (startNode == nullptr) {
+        return nullptr;
+    }
+    std::unordered_set<Node *> visited;
+    std::unordered_map<Node *, Node *> parentMap;
+    Node* foundNode = nullptr;
+    DFSHelper(startNode, targetItem, visited, parentMap, foundNode);
+    return foundNode;
+}
+// omar - builds path from start to found node
+std::vector<Node*> Network::DepthFirstSearchPath(Node *startNode, const std::string &targetItem) {
+    std::vector<Node*> path;
+    if (startNode == nullptr) {
+        return path;
+    }
+    std::unordered_set<Node *> visited;
+    std::unordered_map<Node *, Node *> parentMap;
+    Node* foundNode = nullptr;
+    bool Found = DFSHelper(startNode, targetItem, visited, parentMap, foundNode);
+    if (!Found || foundNode == nullptr) {
+        return path;
+    }
+    Node* curr = foundNode; // omar - reconstruct path w parent map
+    while (curr != nullptr) {
+        path.push_back(curr);
+        if (curr == startNode) {
+            break;
+        }
+        curr = parentMap[curr];
+    }
+    std::reverse(path.begin(), path.end());
+    return path;
+}
 
 void Network::HandleLC(sf::RenderWindow &window, int x, int y) {
-
-    return;
-
+    // return;
     if (x < 0 || x >= window.getSize().x) {
         return;
     }

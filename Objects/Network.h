@@ -9,6 +9,8 @@
 #include "PersonData.h"
 #include <map>
 #include <cmath>
+#include <unordered_set>
+#include <unordered_map>
 
 
 
@@ -16,13 +18,16 @@ class Network {
 
     std::vector<Node*> people;
     std::vector<sf::RectangleShape> lines;
+    //omar - recursive DFS helper func
+    bool DFSHelper(Node* curr, const std::string& targetItem, std::unordered_set<Node*>& visited, std:: unordered_map<Node*, Node*>& parentMap, Node*& foundNode);
+    //omar - helper to check if node has target item
+    bool NodehasItem(const Node* node, const std::string& targetItem) const;
 
 public:
 
     void AddPerson(Node* person) {
         people.push_back(person);
     }
-
 
     void TestPopulate(PersonData& pd) {
 
@@ -74,6 +79,10 @@ public:
             std::cout << n->name << "\n";
         }
     }
+    // omar - main DFS func that finds first node w target item
+    Node* DepthFirstSearch(Node* startNode, const std::string& targetItem);
+    // omar - returns full path from start node to found node
+    std::vector<Node*> DepthFirstSearchPath(Node* startNode, const std::string& targetItem);
 
 };
 
