@@ -14,7 +14,7 @@
 
 
 
-class Network {
+struct Network {
 
     std::vector<Node*> people;
     std::vector<sf::RectangleShape> lines;
@@ -23,7 +23,8 @@ class Network {
     //omar - helper to check if node has target item
     bool NodehasItem(const Node* node, const std::string& targetItem) const;
 
-public:
+    Node* startingNode = nullptr;
+
 
     void AddPerson(Node* person) {
         people.push_back(person);
