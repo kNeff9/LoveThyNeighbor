@@ -12,17 +12,18 @@
 
 
 
-class Network {
+struct Network {
 
     std::vector<Node*> people;
     std::vector<sf::RectangleShape> lines;
 
-public:
+    Node* startingNode = nullptr;
+
+
 
     void AddPerson(Node* person) {
         people.push_back(person);
     }
-
 
     void TestPopulate(PersonData& pd) {
 

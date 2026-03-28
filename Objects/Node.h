@@ -5,14 +5,14 @@
 #include <vector>
 #include <string>
 #include <SFML/Graphics.hpp>
-#include <set>
+#include <unordered_set>
 
 struct  Node {
 
     std::string name;
-    std::vector<std::string> items;
+    std::unordered_set<std::string> items;
     // std::vector<Node*> friends;
-    std::set<Node*> friends;
+    std::unordered_set<Node*> friends;
 
     sf::CircleShape shape;
     float xpos;
@@ -26,7 +26,7 @@ struct  Node {
         this->xpos = x;
         this->ypos = y;
 
-        shape.setRadius(5);
+        shape.setRadius(8);
         shape.setFillColor(sf::Color::Blue);
         shape.setPosition({x,y});
 
