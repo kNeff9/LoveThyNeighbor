@@ -85,46 +85,37 @@ struct Country {
 
     Node* iterativeBFS(Node* start, const std::string& item) {
 
-        int numTravelled = 0;
-
         auto startTime = std::chrono::high_resolution_clock::now();
 
-        // std::unordered_set<Node*> visited;
-        // std::queue<Node*> q;
+        std::unordered_set<Node*> visited;
+        std::queue<Node*> q;
 
-        std::unordered_set<Node*> seen;
-        std::vector<Node*> holder;
-        holder.push_back(start);
-        seen.insert(start);
+        visited.insert(start);
+        q.push(start);
+        int verticesTraversed = 0;
 
-        while (!holder.empty()) {
+        while (!q.empty()) {
+            Node* u = q.front();
+            q.pop();
+            verticesTraversed++;
 
-            std::vector<Node*> tempHolder;
+            for (Node* v : u->friends) {
+                for (const std::string& owned : v->items) {
+                    if (owned == item) {
 
-            for (Node* n : holder) {
-
-                for (Node* f : n->friends) {
-
-                    if (seen.count(f)) {
-                        continue;
-                    }
-
-                    numTravelled++;
-
-                    if (f->items.count(item)) {
                         auto endTime = std::chrono::high_resolution_clock::now();
                         timeTaken = std::to_string(std::chrono::duration<double, std::milli>(endTime - startTime).count());
-                        vertsTravelled = numTravelled;
-                        return f;
+                        vertsTravelled = verticesTraversed;
+                        return v;
                     }
-
-                    tempHolder.push_back(f);
-                    seen.insert(f);
                 }
+
+                if (visited.find(v) == visited.end()) {
+                    visited.insert(v);
+                    q.push(v);
+                }
+
             }
-
-            holder = tempHolder;
-
         }
 
         return nullptr;
