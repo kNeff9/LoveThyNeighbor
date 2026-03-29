@@ -32,6 +32,10 @@ struct NeighborhoodInterface {
 
     sf::Text startingNodeName;
 
+    sf::Text endingNodeName;
+    sf::Text timeElapsed;
+    sf::Text nodesVisited;
+
     sf::Sprite switch_button_spr;
     sf::Texture switch_button_texture;
     sf::Sprite dfsButtonSpr;
@@ -78,6 +82,15 @@ struct NeighborhoodInterface {
         configureText(startingNodeName, "", font, 19, sf::Color::Black);
         setText(startingNodeName, 1675, 125);
 
+        configureText(endingNodeName, "ending node", font, 19, sf::Color::Black);
+        setText(endingNodeName, 1675, 500);
+
+        configureText(timeElapsed, "time elapsed", font, 19, sf::Color::Black);
+        setText(timeElapsed, 1675, 600);
+
+        configureText(nodesVisited, "nodes visited", font, 19, sf::Color::Black);
+        setText(nodesVisited, 1675, 700);
+
     }
 
     void HandleLC(sf::RenderWindow& window, int x, int y);
@@ -97,6 +110,10 @@ struct NeighborhoodInterface {
         }
     }
 
+    void UpdateFoundNode(Node* n) {
+        configureText(endingNodeName, n->name, font, 19, sf::Color::Black);
+    }
+
     void DrawInterface(sf::RenderWindow& window) {
 
         window.draw(bgSprite);
@@ -105,6 +122,10 @@ struct NeighborhoodInterface {
         window.draw(bfsButtonSprite);
         window.draw(dfsButtonSpr);
         window.draw(desiredItem);
+
+        window.draw(endingNodeName);
+        window.draw(timeElapsed);
+        window.draw(nodesVisited);
 
         window.draw(startingNodeName);
 

@@ -19,11 +19,15 @@ void CountryInterface::HandleLC(sf::RenderWindow &window, int x, int y) {
     sf::Vector2<float> clickCoords = window.mapPixelToCoords({x, y});
 
     if (dfsButtonSpr.getGlobalBounds().contains(clickCoords)) {
-        return;
+        std::string item = desiredItemName.getString();
+        Node* res = countryNetwork.iterativeDFS(startingNode, item);
+        UpdateEndingNode(res);
     }
 
     if (bfsButtonSpr.getGlobalBounds().contains(clickCoords)) {
-        return;
+        std::string item = desiredItemName.getString();
+        Node* res = countryNetwork.iterativeBFS(startingNode, item);
+        UpdateEndingNode(res);
     }
 
     if (nodeSwitchSpr.getGlobalBounds().contains(clickCoords)) {

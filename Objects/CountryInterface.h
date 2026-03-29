@@ -82,6 +82,15 @@ struct CountryInterface {
         configureText(desiredItemName, pd.getRandomItem(), font, 25, sf::Color::Black);
         setText(desiredItemName, 360,565);
 
+        configureText(endingNodeName, "", font, 25, sf::Color::Black);
+        setText(endingNodeName, 1000, 350);
+
+        configureText(timeElapsed, "0.00", font, 25, sf::Color::Black);
+        setText(timeElapsed, 1400, 400);
+
+        configureText(numNodesVisited, "0", font, 25, sf::Color::Black);
+        setText(numNodesVisited, 1400, 500);
+
 
     }
 
@@ -90,6 +99,17 @@ struct CountryInterface {
 
         if (n != nullptr) {
             configureText(startingNodeName, n->name, font, 25, sf::Color::Black);
+        }
+    }
+
+    void UpdateEndingNode(Node* n) {
+
+        if (n != nullptr) {
+            configureText(endingNodeName, n->name, font, 25, sf::Color::Black);
+            configureText(timeElapsed, countryNetwork.timeTaken, font, 25, sf::Color::Black);
+            configureText(numNodesVisited, std::to_string(countryNetwork.vertsTravelled), font, 25, sf::Color::Black);
+        } else {
+            std::cout << "nonode" << "\n";
         }
     }
 
@@ -102,10 +122,13 @@ struct CountryInterface {
         window.draw(bgSpr);
         window.draw(startingNodeName);
         window.draw(desiredItemName);
+        window.draw(endingNodeName);
         window.draw(dfsButtonSpr);
         window.draw(bfsButtonSpr);
         window.draw(itemSwitchSpr);
         window.draw(nodeSwitchSpr);
+        window.draw(timeElapsed);
+        window.draw(numNodesVisited);
 
     }
 

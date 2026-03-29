@@ -17,7 +17,7 @@ int main() {
     CountryInterface countryInterface;
     NeighborhoodInterface neighborhoodInterface;
 
-    bool onNeighborhood = true;
+    bool onNeighborhood = false;
 
     while(window.isOpen()) {
         sf::Event event;

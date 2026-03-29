@@ -7,6 +7,8 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
 #include <unordered_map>
+#include <chrono>
+#include <queue>
 
 void Network::AddLine(const Node* n, const Node* f, float thickness) {
 
@@ -57,7 +59,7 @@ bool Network::DFSHelper(Node *curr, const std::string &targetItem, std::unordere
     return false;
 }
 // omar - entry point DFS search
-Node *Network::DepthFirstSearch(Node *startNode, const std::string &targetItem) {
+Node* Network::DepthFirstSearch(Node *startNode, const std::string &targetItem) {
     if (startNode == nullptr) {
         return nullptr;
     }
@@ -92,6 +94,34 @@ std::vector<Node*> Network::DepthFirstSearchPath(Node *startNode, const std::str
     return path;
 }
 
+Node* iterativeBFS(Node* start, const std::string& item) {
+
+    int vertsTravelled = 0;
+
+    auto startTime = std::chrono::high_resolution_clock::now();
+
+    std::unordered_set<Node*> visited;
+    std::queue<Node*> q;
+
+    while (!q.empty()) {
+        Node* u = q.front();
+        q.pop();
+        vertsTravelled++;
+
+        for (Node* v : u->friends) {
+            for (const std::string& owned : v->items) {
+                if (owned == item) {
+                    return v;
+                }
+            }
+        }
+
+    }
+
+    return nullptr;
+
+
+}
 
 void Network::HandleLC(sf::RenderWindow &window, int x, int y) {
 

@@ -15,6 +15,8 @@
 #include <cmath>
 #include <unordered_set>
 #include <random>
+#include <chrono>
+#include <queue>
 
 #include "Node.h"
 #include "PersonData.h"
@@ -28,6 +30,8 @@ struct Country {
     std::vector<Node*> allPeople;
     Node* startingNode = nullptr;
     std::string desiredNoun = "";
+    int vertsTravelled = 0;
+    std::string timeTaken = "0.00";
 
     void Populate(PersonData& pd) {
 
@@ -79,6 +83,91 @@ struct Country {
         return allPeople.at(dist(rng));
     }
 
+    Node* iterativeBFS(Node* start, const std::string& item) {
+
+        int numTravelled = 0;
+
+        auto startTime = std::chrono::high_resolution_clock::now();
+
+        // std::unordered_set<Node*> visited;
+        // std::queue<Node*> q;
+
+        std::unordered_set<Node*> seen;
+        std::vector<Node*> holder;
+        holder.push_back(start);
+        seen.insert(start);
+
+        while (!holder.empty()) {
+
+            std::vector<Node*> tempHolder;
+
+            for (Node* n : holder) {
+
+                for (Node* f : n->friends) {
+
+                    if (seen.count(f)) {
+                        continue;
+                    }
+
+                    numTravelled++;
+
+                    if (f->items.count(item)) {
+                        auto endTime = std::chrono::high_resolution_clock::now();
+                        timeTaken = std::to_string(std::chrono::duration<double, std::milli>(endTime - startTime).count());
+                        vertsTravelled = numTravelled;
+                        return f;
+                    }
+
+                    tempHolder.push_back(f);
+                    seen.insert(f);
+                }
+            }
+
+            holder = tempHolder;
+
+        }
+
+        return nullptr;
+
+    }
+
+    Node* iterativeDFS(Node* start, const std::string& item) {
+        if (start == nullptr) {
+            return nullptr;
+        }
+        std::unordered_set<Node*> seen;
+        std::vector<Node*> nodeStack;
+        nodeStack.push_back(start);
+
+        auto startTime = std::chrono::high_resolution_clock::now();
+        int numTravelled = 0;
+
+
+        while (!nodeStack.empty()) {
+            Node* currNode = nodeStack.back();
+            nodeStack.pop_back();
+            if (seen.find(currNode) != seen.end()) {
+                continue;
+            }
+            numTravelled++;
+            seen.insert(currNode);
+
+            if (currNode -> items.count(item)) {
+
+                auto endTime = std::chrono::high_resolution_clock::now();
+                timeTaken = std::to_string(std::chrono::duration<double, std::milli>(endTime - startTime).count());
+                vertsTravelled = numTravelled;
+                return currNode;
+            }
+            for (Node* neighbor : currNode -> friends) {
+                if (seen.find(neighbor) == seen.end()) {
+                    nodeStack.push_back(neighbor);
+                }
+            }
+        }
+        return nullptr;
+    }
+
     std::string GetRandomNoun(PersonData& pd) {
 
         std::random_device rd;
@@ -87,6 +176,8 @@ struct Country {
         return pd.allNouns.at(dist(rng));
 
     }
+
+
 
 };
 

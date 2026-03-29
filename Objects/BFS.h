@@ -24,7 +24,7 @@ class BFS {
 public:
     searchResult iterative(Node* start, const std::string& item);
 
-private:
+
     // Path reconstruction for parent map output
     std::vector<Node*> reconstructPath(
         std::unordered_map<Node*, Node*>& parent,

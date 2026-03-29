@@ -11,6 +11,7 @@
 #include <cmath>
 #include <unordered_map>
 #include "BFS.h"
+#include <unordered_set>
 
 
 
@@ -18,8 +19,12 @@ struct Network {
 
     std::vector<Node*> people;
     std::vector<sf::RectangleShape> lines;
+    std::unordered_set<std::string> allItems;
 
     Node* startingNode = nullptr;
+    std::string desiredItem = "";
+
+    BFS bfs;
 
     //omar - recursive DFS helper func
     bool DFSHelper(Node* curr, const std::string& targetItem, std::unordered_set<Node*>& visited, std::unordered_map<Node*, Node*>& parentMap, Node*& foundNode);
@@ -34,7 +39,13 @@ struct Network {
     void TestPopulate(PersonData& pd) {
 
         for (auto pair : pd.houseCoords) {
-            people.push_back(new Node(pd.getRandomName(), pair.first, pair.second));
+
+            Node* newNode = new Node(pd.getRandomName(), pair.first, pair.second);
+            for (int i = 0; i < 3; i++) {
+                std::string randItem = pd.getRandomItem();
+                newNode->items.insert(pd.getRandomItem());
+            }
+            people.push_back(newNode);
         }
 
         for (Node* currHouse : people) {
@@ -74,6 +85,8 @@ struct Network {
     void AddLine(const Node* n, const Node* f, float thickness);
 
     void HandleLC(sf::RenderWindow& window, int x, int y);
+
+    Node* iterativeBFS(Node* start, const std::string& item);
 
     void PrintNames() {
 

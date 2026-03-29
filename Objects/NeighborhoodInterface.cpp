@@ -9,11 +9,8 @@
 #include <string>
 #include <vector>
 #include <SFML/Graphics.hpp>
-#include "PersonData.h"
-#include <map>
-#include <cmath>
-#include "helperFuncs.h"
 #include "NeighborhoodInterface.h"
+#include "BFS.h"
 
 void NeighborhoodInterface::HandleLC(sf::RenderWindow &window, int x, int y) {
 
@@ -30,6 +27,8 @@ void NeighborhoodInterface::HandleLC(sf::RenderWindow &window, int x, int y) {
 
     if (switch_button_spr.getGlobalBounds().contains(clickCoords)) {
         RandomizeItem();
+        std::string newItem = desiredItem.getString();
+        network.desiredItem = newItem;
     }
 
     if (dfsButtonSpr.getGlobalBounds().contains(clickCoords)) {
@@ -37,7 +36,17 @@ void NeighborhoodInterface::HandleLC(sf::RenderWindow &window, int x, int y) {
     }
 
     if (bfsButtonSprite.getGlobalBounds().contains(clickCoords)) {
-        return;
+
+        // searchResult res = network.bfs.iterative(network.startingNode, desiredItem.getString());
+        //
+        // if (res.found) {
+        //     UpdateFoundNode(res.target);
+        // }
+
+        // std::cout << network.startingNode->name << " " << network.desiredItem << "\n";
+
+        // Node* res = network.iterativeBFS(network.startingNode, desiredItem.getString());
+        // UpdateFoundNode(res);
     }
 
     for (Node* n : network.people) {
